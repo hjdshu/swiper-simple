@@ -10,12 +10,16 @@
         <swiper-item>3 </swiper-item>
       </Swiper>
     </div>
+
+    <div class="one" ref="oneclick">一次</div>
+
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import {Swiper, SwiperItem} from './components/swiper-simple'
+import { once } from 'wind-dom/src/event'
 
 export default {
   name: 'app',
@@ -23,6 +27,11 @@ export default {
     // HelloWorld,
     Swiper,
     SwiperItem
+  },
+  mounted () {
+    once(this.$refs.oneclick, 'click', function(){
+      alert(1)
+    })
   }
 }
 </script>

@@ -1,17 +1,17 @@
 <style>
-.mint-swipe {
+.swiper-simple {
   overflow: hidden;
   position: relative;
   height: 100%;
 }
-.mint-swipe-items-wrap {
+.swiper-simple-items-wrap {
   position: relative;
   overflow: hidden;
   height: 100%;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
-.mint-swipe-items-wrap > div {
+.swiper-simple-items-wrap > div {
   position: absolute;
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
@@ -19,19 +19,19 @@
   height: 100%;
   display: none;
 }
-.mint-swipe-items-wrap > div.is-active {
+.swiper-simple-items-wrap > div.is-active {
   display: block;
   -webkit-transform: none;
   transform: none;
 }
-.mint-swipe-indicators {
+.swiper-simple-indicators {
   position: absolute;
   bottom: 10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-.mint-swipe-indicator {
+.swiper-simple-indicator {
   width: 8px;
   height: 8px;
   display: inline-block;
@@ -40,19 +40,19 @@
   opacity: 0.2;
   margin: 0 3px;
 }
-.mint-swipe-indicator.is-active {
+.swiper-simple-indicator.is-active {
   background: #fff;
 }
 </style>
 
 <template>
-  <div class="mint-swipe">
-    <div class="mint-swipe-items-wrap" ref="wrap">
+  <div class="swiper-simple">
+    <div class="swiper-simple-items-wrap" ref="wrap">
       <slot></slot>
     </div>
-    <div class="mint-swipe-indicators" v-show="showIndicators">
+    <div class="swiper-simple-indicators" v-show="showIndicators">
       <div
-        class="mint-swipe-indicator"
+        class="swiper-simple-indicator"
         v-for="(page, $index) in pages"
         :key="$index"
         :class="{ 'is-active': $index === index }"
@@ -66,12 +66,10 @@ import { once } from 'wind-dom/src/event'
 import { addClass, removeClass } from 'wind-dom/src/class'
 
 export default {
-  name: 'mt-swipe',
-
+  name: 'swipe-simple',
   created() {
     this.dragState = {}
   },
-
   data() {
     return {
       ready: false,
@@ -85,48 +83,39 @@ export default {
       noDrag: false
     }
   },
-
   props: {
     speed: {
       type: Number,
       default: 300
     },
-
     defaultIndex: {
       type: Number,
       default: 0
     },
-
     disabled: {
       type: Boolean,
       default: false
     },
-
     auto: {
       type: Number,
       default: 3000
     },
-
     continuous: {
       type: Boolean,
       default: true
     },
-
     showIndicators: {
       type: Boolean,
       default: true
     },
-
     noDragWhenSingle: {
       type: Boolean,
       default: true
     },
-
     prevent: {
       type: Boolean,
       default: false
     },
-
     propagation: {
       type: Boolean,
       default: false
@@ -175,7 +164,7 @@ export default {
         }
 
         once(element, 'webkitTransitionEnd', transitionEndCallback)
-        setTimeout(transitionEndCallback, speed + 100) // webkitTransitionEnd maybe not fire on lower version android.
+        setTimeout(transitionEndCallback, speed + 100)
       } else {
         element.style.webkitTransition = ''
         element.style.webkitTransform = `translate3d(${offset}px, 0, 0)`

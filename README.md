@@ -1,29 +1,22 @@
 # swiper-simple
 
-## Project setup
-```
-yarn install
+# install
+
+``` bash
+  yarn add git+ssh://git@github.com:hjdshu/swiper-simple.git
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
+# use
+
+``` javascript
+import 'swiper-simple/dist/swiper-simple.css'
+import { Swiper, SwiperItem } from 'swiper-simple'
 ```
 
-### Compiles and minifies for production
+``` html
+<swiper>
+  <SwiperItem>page1</SwiperItem>
+  <SwiperItem>page2</SwiperItem>
+  <SwiperItem>page3</SwiperItem>
+</swiper>
 ```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
