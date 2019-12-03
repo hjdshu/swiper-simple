@@ -8080,6 +8080,11 @@ wide-align@^1.1.0:
   dependencies:
     string-width "^1.0.2 || 2"
 
+wind-dom@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npm.taobao.org/wind-dom/download/wind-dom-0.0.3.tgz#3456e3d959dbebdcbf76ca68c6a4e8142f26360f"
+  integrity sha1-NFbj2Vnb69y/dspoxqToFC8mNg8=
+
 word-wrap@~1.2.3:
   version "1.2.3"
   resolved "https://registry.npm.taobao.org/word-wrap/download/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"

@@ -2,14 +2,17 @@
   "name": "swiper-simple",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/swiper-simple.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:lib": "vue-cli-service build --target lib --name swiper-simple ./src/components/swiper-simple/index.js"
   },
   "dependencies": {
     "core-js": "^3.4.3",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "wind-dom": "^0.0.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
