@@ -1769,12 +1769,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3ef78384-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/swiper-simple/swiper.vue?vue&type=template&id=946529dc&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mint-swipe"},[_c('div',{ref:"wrap",staticClass:"mint-swipe-items-wrap"},[_vm._t("default")],2),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.showIndicators),expression:"showIndicators"}],staticClass:"mint-swipe-indicators"},_vm._l((_vm.pages),function(page,$index){return _c('div',{key:$index,staticClass:"mint-swipe-indicator",class:{ 'is-active': $index === _vm.index }})}),0)])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3ef78384-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/swiper-simple/swiper.vue?vue&type=template&id=a7f8f69c&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"swiper-simple"},[_c('div',{ref:"wrap",staticClass:"swiper-simple-items-wrap"},[_vm._t("default")],2),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.showIndicators),expression:"showIndicators"}],staticClass:"swiper-simple-indicators"},_vm._l((_vm.pages),function(page,$index){return _c('div',{key:$index,staticClass:"swiper-simple-indicator",class:{ 'is-active': $index === _vm.index }})}),0)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/swiper-simple/swiper.vue?vue&type=template&id=946529dc&
+// CONCATENATED MODULE: ./src/components/swiper-simple/swiper.vue?vue&type=template&id=a7f8f69c&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.for-each.js
 var es_array_for_each = __webpack_require__("4160");
@@ -1815,57 +1815,10 @@ var src_class = __webpack_require__("726a");
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ var swipervue_type_script_lang_js_ = ({
-  name: 'mt-swipe',
+  name: 'swipe-simple',
   created: function created() {
     this.dragState = {};
   },
@@ -1964,7 +1917,7 @@ var src_class = __webpack_require__("726a");
         };
 
         Object(src_event["once"])(element, 'webkitTransitionEnd', transitionEndCallback);
-        setTimeout(transitionEndCallback, speed + 100); // webkitTransitionEnd maybe not fire on lower version android.
+        setTimeout(transitionEndCallback, speed + 100);
       } else {
         element.style.webkitTransition = '';
         element.style.webkitTransform = "translate3d(".concat(offset, "px, 0, 0)");
@@ -2468,12 +2421,12 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var swiper = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3ef78384-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/swiper-simple/swiper-item.vue?vue&type=template&id=872cab02&
-var swiper_itemvue_type_template_id_872cab02_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mint-swipe-item"},[_vm._t("default")],2)}
-var swiper_itemvue_type_template_id_872cab02_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3ef78384-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/swiper-simple/swiper-item.vue?vue&type=template&id=58d35226&
+var swiper_itemvue_type_template_id_58d35226_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"swipe-simple-item"},[_vm._t("default")],2)}
+var swiper_itemvue_type_template_id_58d35226_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/swiper-simple/swiper-item.vue?vue&type=template&id=872cab02&
+// CONCATENATED MODULE: ./src/components/swiper-simple/swiper-item.vue?vue&type=template&id=58d35226&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/swiper-simple/swiper-item.vue?vue&type=script&lang=js&
 //
@@ -2483,7 +2436,7 @@ var swiper_itemvue_type_template_id_872cab02_staticRenderFns = []
 //
 //
 /* harmony default export */ var swiper_itemvue_type_script_lang_js_ = ({
-  name: 'mt-swipe-item',
+  name: 'swipe-simple-item',
   mounted: function mounted() {
     this.$parent && this.$parent.swipeItemCreated(this);
   },
@@ -2503,8 +2456,8 @@ var swiper_itemvue_type_template_id_872cab02_staticRenderFns = []
 
 var swiper_item_component = normalizeComponent(
   swiper_simple_swiper_itemvue_type_script_lang_js_,
-  swiper_itemvue_type_template_id_872cab02_render,
-  swiper_itemvue_type_template_id_872cab02_staticRenderFns,
+  swiper_itemvue_type_template_id_58d35226_render,
+  swiper_itemvue_type_template_id_58d35226_staticRenderFns,
   false,
   null,
   null,

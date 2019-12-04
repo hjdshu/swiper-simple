@@ -1,50 +1,3 @@
-<style>
-.swiper-simple {
-  overflow: hidden;
-  position: relative;
-  height: 100%;
-}
-.swiper-simple-items-wrap {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-.swiper-simple-items-wrap > div {
-  position: absolute;
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-.swiper-simple-items-wrap > div.is-active {
-  display: block;
-  -webkit-transform: none;
-  transform: none;
-}
-.swiper-simple-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-.swiper-simple-indicator {
-  width: 8px;
-  height: 8px;
-  display: inline-block;
-  border-radius: 100%;
-  background: #000;
-  opacity: 0.2;
-  margin: 0 3px;
-}
-.swiper-simple-indicator.is-active {
-  background: #fff;
-}
-</style>
-
 <template>
   <div class="swiper-simple">
     <div class="swiper-simple-items-wrap" ref="wrap">
@@ -561,3 +514,50 @@ export default {
   }
 }
 </script>
+
+<style>
+.swiper-simple {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+.swiper-simple-items-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.swiper-simple-items-wrap > div {
+  position: absolute;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.swiper-simple-items-wrap > div.is-active {
+  display: block;
+  -webkit-transform: none;
+  transform: none;
+}
+.swiper-simple-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.swiper-simple-indicator {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: 0.2;
+  margin: 0 3px;
+}
+.swiper-simple-indicator.is-active {
+  background: #fff;
+}
+</style>
