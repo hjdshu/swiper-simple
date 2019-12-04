@@ -97,15 +97,14 @@ export default {
     translate(element, offset, speed, callback) {
       if (speed) {
         this.animating = true
-        element.style.webkitTransition =
-          '-webkit-transform ' + speed + 'ms ease-in-out'
+        element.style.webkitTransition = '-webkit-transform ' + speed + 'ms ease-in-out'
         setTimeout(() => {
           element.style.webkitTransform = `translate3d(${offset}px, 0, 0)`
-        }, 50)
+        }, 30)
 
-        var called = false
+        let called = false
 
-        var transitionEndCallback = () => {
+        let transitionEndCallback = () => {
           if (called) return
           called = true
           this.animating = false
@@ -125,10 +124,10 @@ export default {
     },
 
     reInitPages() {
-      var children = this.$children
+      let children = this.$children
       this.noDrag = children.length === 1 && this.noDragWhenSingle
 
-      var pages = []
+      let pages = []
       this.index = this.defaultIndex
 
       children.forEach((child, index) => {
@@ -190,9 +189,9 @@ export default {
         offsetLeft = options.offsetLeft
       }
 
-      var newIndex
+      let newIndex = 0
 
-      var oldPage = this.$children[index].$el
+      let oldPage = this.$children[index].$el
 
       if (towards === 'prev') {
         if (index > 0) {
@@ -214,9 +213,9 @@ export default {
         }
       }
 
-      var callback = () => {
+      let callback = () => {
         if (newIndex !== undefined) {
-          var newPage = this.$children[newIndex].$el
+          let newPage = this.$children[newIndex].$el
           removeClass(oldPage, 'is-active')
           addClass(newPage, 'is-active')
 
@@ -305,9 +304,9 @@ export default {
     doOnTouchStart(event) {
       if (this.noDrag || this.disabled) return
 
-      var element = this.$el
-      var dragState = this.dragState
-      var touch = event.changedTouches ? event.changedTouches[0] : event
+      let element = this.$el
+      let dragState = this.dragState
+      let touch = event.changedTouches ? event.changedTouches[0] : event
 
       dragState.startTime = new Date()
       dragState.startLeft = touch.pageX
@@ -317,9 +316,9 @@ export default {
       dragState.pageWidth = element.offsetWidth
       dragState.pageHeight = element.offsetHeight
 
-      var prevPage = this.$children[this.index - 1]
-      var dragPage = this.$children[this.index]
-      var nextPage = this.$children[this.index + 1]
+      let prevPage = this.$children[this.index - 1]
+      let dragPage = this.$children[this.index]
+      let nextPage = this.$children[this.index + 1]
 
       if (this.continuous && this.pages.length > 1) {
         if (!prevPage) {
@@ -346,18 +345,18 @@ export default {
     doOnTouchMove(event) {
       if (this.noDrag || this.disabled) return
 
-      var dragState = this.dragState
-      var touch = event.changedTouches ? event.changedTouches[0] : event
+      let dragState = this.dragState
+      let touch = event.changedTouches ? event.changedTouches[0] : event
 
       dragState.currentLeft = touch.pageX
       dragState.currentTop = touch.pageY
       dragState.currentTopAbsolute = touch.clientY
 
-      var offsetLeft = dragState.currentLeft - dragState.startLeft
-      var offsetTop = dragState.currentTopAbsolute - dragState.startTopAbsolute
+      let offsetLeft = dragState.currentLeft - dragState.startLeft
+      let offsetTop = dragState.currentTopAbsolute - dragState.startTopAbsolute
 
-      var distanceX = Math.abs(offsetLeft)
-      var distanceY = Math.abs(offsetTop)
+      let distanceX = Math.abs(offsetLeft)
+      let distanceY = Math.abs(offsetTop)
       if (distanceX < 5 || (distanceX >= 5 && distanceY >= 1.73 * distanceX)) {
         this.userScrolling = true
         return
@@ -370,7 +369,7 @@ export default {
         dragState.pageWidth - 1
       )
 
-      var towards = offsetLeft < 0 ? 'next' : 'prev'
+      let towards = offsetLeft < 0 ? 'next' : 'prev'
 
       if (dragState.prevPage && towards === 'prev') {
         this.translate(dragState.prevPage, offsetLeft - dragState.pageWidth)
@@ -391,16 +390,16 @@ export default {
     doOnTouchEnd() {
       if (this.noDrag || this.disabled) return
 
-      var dragState = this.dragState
+      let dragState = this.dragState
 
-      var dragDuration = new Date() - dragState.startTime
-      var towards = null
+      let dragDuration = new Date() - dragState.startTime
+      let towards = null
 
-      var offsetLeft = dragState.currentLeft - dragState.startLeft
-      var offsetTop = dragState.currentTop - dragState.startTop
-      var pageWidth = dragState.pageWidth
-      var index = this.index
-      var pageCount = this.pages.length
+      let offsetLeft = dragState.currentLeft - dragState.startLeft
+      let offsetTop = dragState.currentTop - dragState.startTop
+      let pageWidth = dragState.pageWidth
+      let index = this.index
+      let pageCount = this.pages.length
 
       if (dragDuration < 300) {
         let fireTap = Math.abs(offsetLeft) < 5 && Math.abs(offsetTop) < 5
@@ -501,7 +500,7 @@ export default {
 
     this.reInitPages()
 
-    var element = this.$el
+    let element = this.$el
 
     // for mobile
     element.addEventListener('touchstart', this.dragStartEvent)
