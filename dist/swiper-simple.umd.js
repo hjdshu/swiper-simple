@@ -1769,12 +1769,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3ef78384-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/swiper-simple/swiper.vue?vue&type=template&id=6f5bc338&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3ef78384-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/swiper-simple/swiper.vue?vue&type=template&id=ebe7aac0&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"swiper-simple"},[_c('div',{ref:"wrap",staticClass:"swiper-simple-items-wrap"},[_vm._t("default")],2),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.showIndicators),expression:"showIndicators"}],staticClass:"swiper-simple-indicators"},_vm._l((_vm.pages),function(page,$index){return _c('div',{key:$index,staticClass:"swiper-simple-indicator",class:{ 'is-active': $index === _vm.index }})}),0)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/swiper-simple/swiper.vue?vue&type=template&id=6f5bc338&
+// CONCATENATED MODULE: ./src/components/swiper-simple/swiper.vue?vue&type=template&id=ebe7aac0&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.for-each.js
 var es_array_for_each = __webpack_require__("4160");

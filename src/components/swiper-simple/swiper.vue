@@ -148,10 +148,10 @@ export default {
       if (!options && this.$children.length < 2) return
 
       var prevPage, nextPage, currentPage, pageWidth, offsetLeft
-      var speed = this.speed || 300
-      var index = this.index
-      var pages = this.pages
-      var pageCount = pages.length
+      let speed = this.speed || 300
+      let index = this.index
+      let pages = this.pages
+      let pageCount = pages.length
 
       if (!options || towards === 'goto') {
         options = options || {}
